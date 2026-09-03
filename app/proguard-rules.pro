@@ -1,3 +1,5 @@
 -dontobfuscate
 -dontwarn org.conscrypt.**
 -dontwarn org.apache.harmony.**
+-keep class bin.zip.extrafield.** { *; }
+-keep class bin.zip.** { *; }
