@@ -1,0 +1,12 @@
+{
+  "stable": {
+    "current_version": 20231023,
+    "download_url": "https://github.com/kolak-devs/ApkSignatureKill/releases/download/4.0/stable.apk",
+    "changelog": "- Rebrand application package to com.cumarull.apksignaturekiller\n- Redesign Settings UI (Material 3, rounded cards, category headers)\n- Add Update Channel picker (Stable / Beta)\n- Add in-app update module (check / download / install) with rounded progress dialog\n- Replace DexMerger with dexlib2 2.5.2 to fix BufferOverflow crash\n- Remove vendored dx, filepicker and org.jf source modules\n- Redesign Download progress dialog with percentage and rounded theme\n- Update app title to \"SignatureKill\""
+  },
+  "beta": {
+    "current_version": 20240519,
+    "download_url": "https://github.com/kolak-devs/ApkSignatureKill/releases/download/4.1/beta.apk",
+    "changelog": "- Rebrand application package to com.cumarull.apksignaturekiller\n- Redesign Settings UI (Material 3, rounded cards, category headers)\n- Add Update Channel picker (Stable / Beta)\n- Add in-app update module (check / download / install) with rounded progress dialog\n- Replace DexMerger with dexlib2 2.5.2 to fix BufferOverflow crash\n- Remove vendored dx, filepicker and org.jf source modules\n- Redesign Download progress dialog with percentage and rounded theme\n\n- This is the beta channel, may contain experimental changes"
+  }
+}
