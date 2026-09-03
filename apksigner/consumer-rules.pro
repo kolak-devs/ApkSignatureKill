@@ -1,0 +1,8 @@
+-keep class com.mcal.apksigner.** { *; }
+-keep class com.mcal.common.** { *; }
+-keep class com.android.apksig.** { *; }
+-keep class com.android.apksigner.** { *; }
+-keep class org.spongycastle.** { *; }
+-keep class org.conscrypt.** { *; }
+-keep class kotlinx.coroutines.** { *; }
+-keepattributes *Annotation*
