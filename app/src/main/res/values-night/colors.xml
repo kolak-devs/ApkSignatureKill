@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 - Dark -->
+    <color name="m3_primary">#B4C5FF</color>
+    <color name="m3_on_primary">#003258</color>
+    <color name="m3_primary_container">#2C4190</color>
+    <color name="m3_on_primary_container">#D1E4FF</color>
+
+    <color name="m3_secondary">#BBC7DB</color>
+    <color name="m3_on_secondary">#253140</color>
+    <color name="m3_secondary_container">#3B4858</color>
+    <color name="m3_on_secondary_container">#D7E3F7</color>
+
+    <color name="m3_error">#FFB4AB</color>
+    <color name="m3_on_error">#690005</color>
+    <color name="m3_error_container">#93000A</color>
+    <color name="m3_on_error_container">#FFDAD6</color>
+
+    <color name="m3_background">#121524</color>
+    <color name="m3_on_background">#E2E2E6</color>
+    <color name="m3_surface">#181E34</color>
+    <color name="m3_on_surface">#E2E2E6</color>
+    <color name="m3_surface_variant">#2C2F45</color>
+    <color name="m3_on_surface_variant">#C3C7CF</color>
+    <color name="m3_outline">#8E9099</color>
+    <color name="m3_outline_variant">#44464F</color>
+
+    <color name="card_surface">#20263E</color>
+    <color name="card_outline">#2C2F45</color>
+    <color name="scrim">#000000</color>
+</resources>

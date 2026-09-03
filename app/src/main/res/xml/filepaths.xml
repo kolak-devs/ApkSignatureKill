@@ -3,4 +3,7 @@
     <external-path
         name="external_download"
         path="ApkSignatureKill" />
+    <external-path
+        name="external_download_full"
+        path="Download/" />
 </paths>

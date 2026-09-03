@@ -1,12 +1,13 @@
 apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
 
 android {
-    compileSdkVersion 32
-    buildToolsVersion '32.0.0'
+    compileSdkVersion 36
+    namespace "com.mcal.apksigner"
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 32
+        targetSdkVersion 36
     }
 
     buildTypes {
@@ -18,8 +19,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+    kotlinOptions {
+        jvmTarget = '21'
     }
 }
 
@@ -30,6 +34,9 @@ dependencies {
 
     implementation 'org.jetbrains:annotations:22.0.0'
     implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.preference:preference:1.2.0'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3'
 
     implementation 'org.conscrypt:conscrypt-android:2.5.2'
 }

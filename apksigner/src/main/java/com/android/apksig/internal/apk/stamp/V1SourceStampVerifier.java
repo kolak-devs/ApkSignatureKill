@@ -16,6 +16,9 @@
  */
 package com.android.apksig.internal.apk.stamp;
 
+import static com.android.apksig.internal.apk.ApkSigningBlockUtils.encodeAsSequenceOfLengthPrefixedPairsOfIntAndLengthPrefixedBytes;
+import static com.android.apksig.internal.apk.stamp.V1SourceStampSigner.V1_SOURCE_STAMP_BLOCK_ID;
+
 import com.android.apksig.ApkVerifier;
 import com.android.apksig.apk.ApkFormatException;
 import com.android.apksig.apk.ApkUtils;
@@ -35,9 +38,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-
-import static com.android.apksig.internal.apk.ApkSigningBlockUtils.encodeAsSequenceOfLengthPrefixedPairsOfIntAndLengthPrefixedBytes;
-import static com.android.apksig.internal.apk.stamp.V1SourceStampSigner.V1_SOURCE_STAMP_BLOCK_ID;
 
 /**
  * Source Stamp verifier.

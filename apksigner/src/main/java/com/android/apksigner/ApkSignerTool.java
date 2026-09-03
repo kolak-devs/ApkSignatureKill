@@ -16,8 +16,6 @@
 
 package com.android.apksigner;
 
-import android.os.Build;
-
 import androidx.annotation.NonNull;
 
 import com.android.apksig.ApkSigner;
@@ -30,9 +28,9 @@ import com.android.apksig.util.DataSource;
 import com.android.apksig.util.DataSources;
 import com.android.apksigner.utils.FileUtils;
 
-import org.conscrypt.OpenSSLProvider;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.spongycastle.jce.provider.BouncyCastleProvider;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -42,8 +40,6 @@ import java.io.PrintStream;
 import java.io.RandomAccessFile;
 import java.nio.ByteOrder;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.Provider;
@@ -57,7 +53,6 @@ import java.security.interfaces.ECKey;
 import java.security.interfaces.RSAKey;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -92,30 +87,22 @@ public class ApkSignerTool {
         try {
             if ("sign".equals(cmd)) {
                 sign(Arrays.copyOfRange(params, 1, params.length));
-                return;
             } else if ("verify".equals(cmd)) {
                 verify(Arrays.copyOfRange(params, 1, params.length));
-                return;
             } else if ("rotate".equals(cmd)) {
                 rotate(Arrays.copyOfRange(params, 1, params.length));
-                return;
             } else if ("lineage".equals(cmd)) {
                 lineage(Arrays.copyOfRange(params, 1, params.length));
-                return;
             } else if ("help".equals(cmd)) {
                 printUsage(HELP_PAGE_GENERAL);
-                return;
             } else if ("version".equals(cmd)) {
                 System.out.println(VERSION);
-                return;
             } else {
                 throw new ParameterException(
                         "Unsupported command: " + cmd + ". See --help for supported commands");
             }
         } catch (ParameterException | OptionsParser.OptionsException e) {
             System.err.println(e.getMessage());
-            //System.exit(1);
-            return;
         }
     }
 
@@ -125,7 +112,7 @@ public class ApkSignerTool {
      */
     private static void addProviders() {
         try {
-            Security.addProvider(new OpenSSLProvider());
+            Security.addProvider(new BouncyCastleProvider());
         } catch (UnsatisfiedLinkError e) {
             // This is expected if the library path does not include the native conscrypt library;
             // the default providers support all but PSS algorithms.
@@ -361,7 +348,7 @@ public class ApkSignerTool {
             final File outputV4SignatureFile =
                     new File(outputApk.getCanonicalPath() + ".idsig");
             //Files.deleteIfExists(outputV4SignatureFile.toPath());
-            if (outputV4SignatureFile.exists()){
+            if (outputV4SignatureFile.exists()) {
                 outputV4SignatureFile.delete();
             }
 
@@ -385,7 +372,7 @@ public class ApkSignerTool {
                     e);
         }
         if (!tmpOutputApk.getCanonicalPath().equals(outputApk.getCanonicalPath())) {
-            if(FileUtils.moveFile(tmpOutputApk, outputApk)) {
+            if (FileUtils.moveFile(tmpOutputApk, outputApk)) {
                 System.out.println("Moved");
             }
         }

@@ -17,6 +17,8 @@
 
 package com.android.apksig.internal.util;
 
+import static java.util.concurrent.TimeUnit.MILLISECONDS;
+
 import com.android.apksig.internal.zip.ZipUtils;
 import com.android.apksig.util.DataSink;
 import com.android.apksig.util.DataSource;
@@ -32,8 +34,6 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Phaser;
 import java.util.concurrent.ThreadPoolExecutor;
-
-import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 /**
  * VerityTreeBuilder is used to generate the root hash of verity tree built from the input file.

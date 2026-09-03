@@ -16,6 +16,8 @@
 
 package com.android.apksig.internal.apk.v4;
 
+import static com.android.apksig.internal.apk.ApkSigningBlockUtils.toHex;
+
 import com.android.apksig.ApkVerifier;
 import com.android.apksig.ApkVerifier.Issue;
 import com.android.apksig.internal.apk.ApkSigningBlockUtils;
@@ -41,8 +43,6 @@ import java.security.cert.X509Certificate;
 import java.security.spec.AlgorithmParameterSpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Arrays;
-
-import static com.android.apksig.internal.apk.ApkSigningBlockUtils.toHex;
 
 /**
  * APK Signature Scheme V4 verifier.

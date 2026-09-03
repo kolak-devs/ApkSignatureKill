@@ -1,2 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <!-- Material 3 - Light -->
+    <color name="m3_primary">#4359A9</color>
+    <color name="m3_on_primary">#FFFFFF</color>
+    <color name="m3_primary_container">#D1E4FF</color>
+    <color name="m3_on_primary_container">#001D36</color>
+
+    <color name="m3_secondary">#535F70</color>
+    <color name="m3_on_secondary">#FFFFFF</color>
+    <color name="m3_secondary_container">#D7E3F7</color>
+    <color name="m3_on_secondary_container">#101C2B</color>
+
+    <color name="m3_error">#BA1A1A</color>
+    <color name="m3_on_error">#FFFFFF</color>
+    <color name="m3_error_container">#FFDAD6</color>
+    <color name="m3_on_error_container">#410002</color>
+
+    <color name="m3_background">#FDFBFF</color>
+    <color name="m3_on_background">#1A1C1E</color>
+    <color name="m3_surface">#FDFBFF</color>
+    <color name="m3_on_surface">#1A1C1E</color>
+    <color name="m3_surface_variant">#DFE2EB</color>
+    <color name="m3_on_surface_variant">#43474E</color>
+    <color name="m3_outline">#72797F</color>
+    <color name="m3_outline_variant">#C2C7D0</color>
+
+    <color name="card_surface">#FFFFFF</color>
+    <color name="card_outline">#E0E2EC</color>
+    <color name="scrim">#000000</color>
+</resources>

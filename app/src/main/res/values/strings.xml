@@ -2,6 +2,93 @@
     <string name="app_name">SignatureKill</string>
 
     <string name="settings_title">Settings</string>
+    <string name="cancel_title">Cancel</string>
+    <string name="about_updates">About</string>
+    <string name="updates_title">Updates</string>
+    <string name="about_version">%1$s Version</string>
+    <string name="about_check_updates">Check for Updates</string>
+    <string name="about_check_updates_sub">View the latest releases on GitHub</string>
+    <string name="about_build_release">Release Build</string>
+    <string name="about_build_debug">Debug Build</string>
+    <string name="about_github_url"></string>
+    <string name="pref_update_channel">Update Channel</string>
+    <string name="pref_update_channel_summary">Choose the update channel to check</string>
+    <string-array name="update_channel_entries">
+        <item>Stable</item>
+        <item>Beta</item>
+    </string-array>
+    <string-array name="update_channel_values">
+        <item>stable</item>
+        <item>beta</item>
+    </string-array>
+    <string name="update_url">https://raw.githubusercontent.com/cumaRull/Apk-Editor/refs/heads/master/Releases/update.json</string>
+    <string name="update_no_url">Update URL not configured</string>
+    <string name="update_no_internet">No Internet connection</string>
+    <string name="update_not_found">No Updates Found!</string>
+    <string name="update_title">New Update Available!</string>
+    <string name="update_download">Download</string>
+    <string name="update_close">Close</string>
+    <string name="update_downloading">Downloading Update...</string>
+
+    <string name="toast_select_apk_first">Please select an APK file first</string>
+
+    <!-- Settings -->
+    <string name="pref_cat_appearance">Appearance</string>
+    <string name="pref_theme_title">Theme</string>
+    <string name="pref_theme_summary">Follow system, light or dark</string>
+
+    <string name="pref_cat_signing">Signing</string>
+    <string name="pref_signing_title">Signing Version</string>
+    <string name="pref_signing_summary">Signature scheme applied to the output APK</string>
+
+    <string name="pref_cat_kill">Kill Options</string>
+    <string name="pref_kill_mode_title">Default Kill Mode</string>
+    <string name="pref_kill_mode_summary">Default selected signature-kill mode</string>
+
+    <string name="pref_cat_output">Output</string>
+    <string name="pref_output_dir_title">Output Directory</string>
+    <string name="pref_output_dir_summary">Folder where killed/signed APKs are saved</string>
+    <string name="pref_output_dir_default">/storage/emulated/0/ApkSignatureKill/output</string>
+    <string name="pref_output_select">Select output directory</string>
+    <string name="pref_output_pick_error">Could not open folder picker</string>
+    <string name="pref_output_picked">Output folder set to %1$s</string>
+    <string name="pref_output_use_default">Use Default</string>
+    <string name="pref_output_choose_folder">Choose Folder</string>
+    <string name="pref_output_default">Default</string>
+    <string name="pref_output_custom">Custom</string>
+
+    <string-array name="theme_entries">
+        <item>System</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>system</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+
+    <string-array name="signing_entries">
+        <item>V1 only</item>
+        <item>V1 + V2</item>
+        <item>V1 + V2 + V3</item>
+        <item>V1 + V2 + V3 + V4</item>
+    </string-array>
+    <string-array name="signing_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="kill_mode_entries">
+        <item>Bin Mode</item>
+        <item>Super Mode</item>
+    </string-array>
+    <string-array name="kill_mode_values">
+        <item>bin</item>
+        <item>super</item>
+    </string-array>
 
     <!--Permissions-->
     <string name="scoped_storage_title">Android 11 R changes</string>

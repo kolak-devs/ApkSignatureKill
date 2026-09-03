@@ -17,6 +17,12 @@
 
 package com.android.apksig.internal.apk.v1;
 
+import static com.android.apksig.internal.oid.OidConstants.getSigAlgSupportedApiLevels;
+import static com.android.apksig.internal.pkcs7.AlgorithmIdentifier.getJcaDigestAlgorithm;
+import static com.android.apksig.internal.pkcs7.AlgorithmIdentifier.getJcaSignatureAlgorithm;
+import static com.android.apksig.internal.x509.Certificate.findCertificate;
+import static com.android.apksig.internal.x509.Certificate.parseCertificates;
+
 import android.util.Base64;
 
 import com.android.apksig.ApkVerifier.Issue;
@@ -70,12 +76,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
 import java.util.jar.Attributes;
-
-import static com.android.apksig.internal.oid.OidConstants.getSigAlgSupportedApiLevels;
-import static com.android.apksig.internal.pkcs7.AlgorithmIdentifier.getJcaDigestAlgorithm;
-import static com.android.apksig.internal.pkcs7.AlgorithmIdentifier.getJcaSignatureAlgorithm;
-import static com.android.apksig.internal.x509.Certificate.findCertificate;
-import static com.android.apksig.internal.x509.Certificate.parseCertificates;
 
 /**
  * APK verifier which uses JAR signing (aka v1 signing scheme).
@@ -1068,7 +1068,7 @@ public abstract class V1SchemeVerifier {
                     }
                     byte[] actualSignatureFileDigest =
                             MessageDigest.getInstance(
-                                    getJcaDigestAlgorithm(digestAlgorithmOid))
+                                            getJcaDigestAlgorithm(digestAlgorithmOid))
                                     .digest(signatureFile);
                     if (!Arrays.equals(
                             expectedSignatureFileDigest, actualSignatureFileDigest)) {

@@ -17,6 +17,9 @@
 
 package com.android.apksig.internal.apk.v1;
 
+import static com.android.apksig.internal.pkcs7.AlgorithmIdentifier.getSignerInfoDigestAlgorithmOid;
+import static com.android.apksig.internal.pkcs7.AlgorithmIdentifier.getSignerInfoSignatureAlgorithm;
+
 import android.util.Base64;
 
 import com.android.apksig.apk.ApkFormatException;
@@ -51,9 +54,6 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 import java.util.jar.Attributes;
 import java.util.jar.Manifest;
-
-import static com.android.apksig.internal.pkcs7.AlgorithmIdentifier.getSignerInfoDigestAlgorithmOid;
-import static com.android.apksig.internal.pkcs7.AlgorithmIdentifier.getSignerInfoSignatureAlgorithm;
 
 /**
  * APK signer which uses JAR signing (aka v1 signing scheme).
