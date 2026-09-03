@@ -6,3 +6,4 @@
 -keep class org.conscrypt.** { *; }
 -keep class kotlinx.coroutines.** { *; }
 -keepattributes *Annotation*
+-dontwarn javax.naming.**

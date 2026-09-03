@@ -1,5 +1,14 @@
 -dontobfuscate
 -dontwarn org.conscrypt.**
 -dontwarn org.apache.harmony.**
+-dontwarn javax.naming.**
 -keep class bin.zip.extrafield.** { *; }
 -keep class bin.zip.** { *; }
+-keep class com.android.apksig.** { *; }
+-keep class com.android.apksigner.** { *; }
+-keep class org.spongycastle.** { *; }
+-keep class org.conscrypt.** { *; }
+-keep class com.mcal.apksigner.** { *; }
+-keep class com.mcal.common.** { *; }
+-keep class kotlinx.coroutines.** { *; }
+-keepattributes *Annotation*
