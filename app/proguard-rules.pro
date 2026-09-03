@@ -1,1 +1,3 @@
 -dontobfuscate
+-dontwarn org.conscrypt.**
+-dontwarn org.apache.harmony.**
